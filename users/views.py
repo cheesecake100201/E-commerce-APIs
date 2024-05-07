@@ -13,7 +13,7 @@ class CustomerViewSet(viewsets.ModelViewSet):
     # permission_classes = [IsAuthenticated]
     filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
     filterset_class = CustomerFilter
-    search_fields = ['username', 'address', 'phone']
+    search_fields = ['username', 'first_name', 'last_name', 'address', 'phone']
     ordering_fields = ['username', 'address', 'phone']
 
     def get_permissions(self):

@@ -7,7 +7,7 @@ class OrderFilter(django_filters.FilterSet):
 
     class Meta:
         model = Order
-        fields = ['customer', 'total_price']
+        fields = ['customer', 'total_price', 'products']
 
 class OrderItemFilter(django_filters.FilterSet):
     product__name = django_filters.CharFilter(lookup_expr='icontains')

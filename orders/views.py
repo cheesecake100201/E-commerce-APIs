@@ -13,7 +13,7 @@ class OrderViewSet(viewsets.ModelViewSet):
     permission_classes = [IsAuthenticated]
     filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
     filterset_class = OrderFilter
-    search_fields = ['customer__username']
+    search_fields = ['customer__username', 'total_price', 'products']
     ordering_fields = ['customer__username', 'total_price']
 
     def destroy(self, request, *args, **kwargs):

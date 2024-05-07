@@ -4,4 +4,4 @@ from .models import Customer
 class CustomerFilter(django_filters.FilterSet):
     class Meta:
         model = Customer
-        fields = ['username', 'address', 'phone']
+        fields = ['username', 'first_name', 'last_name', 'address', 'phone']
