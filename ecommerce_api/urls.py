@@ -19,13 +19,13 @@ from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 from rest_framework.routers import DefaultRouter
 from users.views import CustomerViewSet, UserRegistrationView
 from products.views import ProductViewSet
-from orders.views import OrderItemViewSet, OrderViewSet
+from orders.views import OrderViewSet
 
 router = DefaultRouter()
 router.register('users', CustomerViewSet, basename='user')
 router.register('products', ProductViewSet, basename='product')
 router.register('orders', OrderViewSet, basename='order')
-router.register('order-items', OrderItemViewSet, basename='order-item')
+# router.register('order-items', OrderItemViewSet, basename='order-item')
 
 urlpatterns = [
     path('', include(router.urls)),

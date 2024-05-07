@@ -21,10 +21,10 @@ class OrderViewSet(viewsets.ModelViewSet):
         return Response({'success': True}, status=204)
 
 
-class OrderItemViewSet(viewsets.ModelViewSet):
-    queryset = OrderItem.objects.all()
-    serializer_class = OrderItemSerializer
-    filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
-    filterset_class = OrderItemFilter
-    search_fields = ['product__name']
-    ordering_fields = ['product__name', 'quantity']
+# class OrderItemViewSet(viewsets.ModelViewSet):
+#     queryset = OrderItem.objects.all()
+#     serializer_class = OrderItemSerializer
+#     filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
+#     filterset_class = OrderItemFilter
+#     search_fields = ['product__name']
+#     ordering_fields = ['product__name', 'quantity']
