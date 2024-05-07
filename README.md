@@ -4,6 +4,7 @@ library. To start with the program:
 2) pip3 install -r requirements.txt
 3) python manage.py makemigrations
 4) python manage.py migrate
+
 After these steps, you need to create a superuser so you can generate an access token and a refresh token as these JWT tokens will give you access to other endpoints
 To create a superuser(staff member), run the following command: *python manage.py createsuperuser*. Fill the upcoming prompts and you are now a superuser.
 To create a normal user, go to the /register/ endpoint and add your username and password which are the required fields. First_name, last_name, address, phone are optional fields.
