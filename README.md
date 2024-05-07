@@ -25,5 +25,7 @@ All the below endpoints can be accessed only if you have an access token and thr
 6) **/orders/<pk>/** (GET, POST, DELETE). For update, pass the field you want to update.
 
 Searching Syntax: **GET /users/?search=john**
+
 Ordering Syntax: **GET /orders/?ordering=-total_price**
+
 Filtering Syntax: **GET /products/?name=shirt&price_min=10&price_max=50**
