@@ -18,11 +18,13 @@ created to generate the access and refresh tokens. Be mindful that the access to
 
 All the below endpoints can be accessed only if you have an access token and through postman. The token needs to be pasted under the Auth tab, under the Bearer Token Auth Type.
 1) **/users/** (GET, POST). For POST, in the body you have to pass username, password, first_name, last_name as required fields. Email, address and phone are optional fields. Users can be searched by using username, first_name, last_name, phone or address. For example, **GET /users/?search=john**
-2) **/users/<pk>/** (GET, UPDATE, DELETE). For update, you can pass the fields you want to update.
+2) **/users/pk/** (GET, UPDATE, DELETE). For update, you can pass the fields you want to update.
 3) **/products/** (GET, POST). For POST, you have to pass name, description and price as the fields to create a product in the database. Products can be searched using name or description.
-4) **/products/<pk>/** (GET, UPDATE, DELETE). For UPDATE, pass the field you want to update.
+4) **/products/pk/** (GET, UPDATE, DELETE). For UPDATE, pass the field you want to update.
 5) **/orders/** (GET, POST). For POST, pass {"customer": id, "items": [{"product": id, "quantity": int}]}. Orders can be searched using username of the user who wants the order, total_price or products
-6) **/orders/<pk>/** (GET, POST, DELETE). For update, pass the field you want to update.
+6) **/orders/pk/** (GET, POST, DELETE). For update, pass the field you want to update.
+
+pk: Primary key
 
 Searching Syntax: **GET /users/?search=john**
 
