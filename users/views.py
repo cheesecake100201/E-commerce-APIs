@@ -23,10 +23,7 @@ class CustomerViewSet(viewsets.ModelViewSet):
         if self.action in ['update', 'partial_update', 'destroy']:
             return [IsAuthenticated(), IsAccountOwner()]
         elif self.action == 'create':
-            if self.request.user.is_authenticated:
-                return [permissions.IsAdminUser()]
-            else:
-                return [permissions.AllowAny()]
+            return [AllowAny()]
         return [IsAuthenticated()]
 
     def destroy(self, request, *args, **kwargs):
